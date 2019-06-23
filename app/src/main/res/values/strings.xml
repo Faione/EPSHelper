@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">快递助手</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_lable_check">我的快递</string>
+    <string name="title_lable_location">自取地址</string>
+    <string name="title_lable_plus">已取快递</string>
+    <string name="btn_lable_check">同步快递讯息</string>
+    <string name="add_address_title">增改操作页面</string>
+    <string name="add_address_hint1">快递公司</string>
+    <string name="add_address_hint2">自取地址</string>
+    <string name="add_address_hint3">歇业时间</string>
+    <string name="add_address_btn_submit">确认</string>
+    <string name="showbody_epsname">快递公司名称</string>
+    <string name="showbody_epsdate">快递日期</string>
+    <string name="showbody_epsdetail">短信详细内容</string>
+    <string name="address_tip">点击增加按钮开始添加您常用的快递地址</string>
+    <string name="address_btn">增加</string>
+    <string name="td_empty">今日无快递信息</string>
+    <string name="ye_emptu">昨日无快递信息</string>
+    <string name="wek_empty">这周无快递信息</string>
+    <string name="check_title">开始同步</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_eles">您已收取的快递</string>
+    <string name="designer">Designed By 方浩镭</string>
+    <string name="hellow_designer">试用版程序在使用过程中出现的任何问题，或者您有任何关于该程序的意见建议，都可以发送至邮箱1287481902@qq.com</string>
+</resources>
