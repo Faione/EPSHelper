@@ -169,7 +169,7 @@ public class EpslistActivity extends ListActivity implements  Runnable, AdapterV
         //返回数据
         EpsManager manager = new EpsManager(this);
         for(EpsItem item : manager.listAll() ){
-                if (item.getExpressSituation().equals("是")) {
+                if (item.getExpressSituation().equals("是") && firstUsing == 1) {
                     HashMap<String, String> map = new HashMap<String, String>();
                     map.put("ItemId", String.valueOf(item.getId()));
                     map.put("ItemDate", item.getExpressDate());

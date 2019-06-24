@@ -3,6 +3,7 @@ package com.example.faione.epshelper;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ public class SupportActivity extends AppCompatActivity {
     private MediaPlayer mp=new MediaPlayer();
     private ImageButton alwayswithme;
     private TextView dg;
+    int i = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,16 @@ public class SupportActivity extends AppCompatActivity {
         alwayswithme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
-                dg.setVisibility(View.VISIBLE);
+               if(i%2==0) {
+                   mp.start();
+                   dg.setText(R.string.designer);
+                   dg.setVisibility(View.VISIBLE);}
+               else if(i%2==1) {
+                   mp.pause();
+                   dg.setText("Thank You For Using");
+               }i++;
             }
+
         });
     }
     @Override
