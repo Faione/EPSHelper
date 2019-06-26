@@ -145,16 +145,17 @@ public class EpslistActivity extends ListActivity implements  Runnable, AdapterV
                         if(lastDate==null) {
                             firstUsing = 1;
                             addEplist(epsList, date, body);
-                            EpsManager manager = new EpsManager(this);
-                            manager.deleteAll();
-                            manager.addAll(epsList);
                         }else if(epd.getTime()> lastDate.getTime()){
+
                                 addEplist(epsList, date, body);
-                                EpsManager manager = new EpsManager(this);
-                                manager.addAll(epsList);
                         }
                 }
                 }
+                EpsManager manager = new EpsManager(this);
+               if(firstUsing == 1 ){
+                   manager.deleteAll();
+               }
+                manager.addAll(epsList);
             }
         //记录更新日期
         //更新记录日期
@@ -169,7 +170,7 @@ public class EpslistActivity extends ListActivity implements  Runnable, AdapterV
         //返回数据
         EpsManager manager = new EpsManager(this);
         for(EpsItem item : manager.listAll() ){
-                if (item.getExpressSituation().equals("是") && firstUsing == 1) {
+                if (item.getExpressSituation().equals("是") ) {
                     HashMap<String, String> map = new HashMap<String, String>();
                     map.put("ItemId", String.valueOf(item.getId()));
                     map.put("ItemDate", item.getExpressDate());

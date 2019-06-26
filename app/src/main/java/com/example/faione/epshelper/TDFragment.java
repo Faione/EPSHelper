@@ -125,7 +125,7 @@ public class TDFragment extends Fragment implements AdapterView.OnItemClickListe
         map = (HashMap<String, Object>)tdlistView.getItemAtPosition(position);
             CheckId = (int) map.get("epsid");
             final   ContentValues contentValues = new ContentValues();
-            contentValues.put("EPSSITUATION","是");
+            contentValues.put("EPSSITUATION","已收");
 
             builder.setTitle("提示").setMessage("请确认已经收到快递！").setPositiveButton("是", new DialogInterface.OnClickListener() {
             @Override

@@ -71,12 +71,12 @@ public class ElseFragment extends Fragment implements AdapterView.OnItemClickLis
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
         EpsManager manager = new EpsManager(getActivity());
         for (EpsItem item : manager.listAll()) {
-            if( item.getExpressSituation().equals("是")) {
+            if( item.getExpressSituation().equals("已收")) {
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("epsid", item.getId());
                 map.put("elsedate", item.getExpressDate());
                 map.put("elsename", item.getExpressName());
-                map.put("elsesituation", "已收");
+                map.put("elsesituation", item.getExpressSituation());
                 list.add(map);
             }
         }
